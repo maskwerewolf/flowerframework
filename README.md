@@ -1,15 +1,18 @@
-##
+##基于spring-data-jdbc 进行优雅封装
 ```
-根据datasource + table + conditions  + result 封装Jdbc
+简化JDBC使其更优雅
+
 Jdbc.build(datasource,tableName)
 默认datasource , 获取spring容器中 datasource
 默认tableName, 获取 @table中注解
+设置不同、datasource 、 tableName 可以更灵活的进行分表分库操作
+
 ```
-## 1、插入数据
+## 1、INSERT
 ```
    Jdbc.build().insert(obj)
 ```
-## 2、修改数据
+## 2、UPDATE
 ```
    Jdbc.build().update(class).where("column = ? ",value).set("column", value)
 
@@ -19,7 +22,7 @@ Jdbc.build(datasource,tableName)
    })
 
 ```
-## 3 INC操作
+## 3 INC
 ```
    Jdbc.build().update(class).where("......").inc("c1",v1).inc("c1",v2).set()
    Jdbc.build().update(class).where("......").inc("c1",v1).inc("c1",v2).set(....)
