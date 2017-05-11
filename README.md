@@ -28,7 +28,7 @@ Jdbc.build(datasource,tableName)
    Jdbc.build().update(class).where("......").inc("c1",v1).inc("c1",v2).set(....)
 ```
 
-## 查询
+## QUERY
 
 ```
     Jdbc.build().query(clsss,colums ...).where(....).page(limit,page);
