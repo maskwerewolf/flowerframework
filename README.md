@@ -1,13 +1,26 @@
-##基于spring-data-jdbc 进行优雅封装
-```
-简化JDBC使其更优雅
+### flower-jdbc
 
+## 简化JDBC使其更优雅
+```
 Jdbc.build(datasource,tableName)
 默认datasource , 获取spring容器中 datasource
 默认tableName, 获取 @table中注解
 事务采用spring transactionManager 事务
 设置不同、datasource 、 tableName 可以更灵活的进行分表分库操作
+```
+## Maven
+```
+<dependency>
+  <groupId>com.github.maskwerewolf</groupId>
+  <artifactId>flower-mysql</artifactId>
+  <version>1.0</version>
+</dependency>
 
+<dependency>
+  <groupId>com.github.maskwerewolf</groupId>
+  <artifactId>flower-core</artifactId>
+  <version>1.0</version>
+</dependency>
 
 ```
 ## 1、INSERT
