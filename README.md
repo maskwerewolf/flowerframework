@@ -70,6 +70,8 @@
      
      
     Jdbc.update(Query.query("id=?",""),Update.setIfAbsent("nickname","value").inc("age",1),User.class)
+    
+    >sql: update user set nickname=? ,age = age+1 where id = ?
 
     
         
